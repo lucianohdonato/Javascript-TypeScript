@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS DOM paragraph style</title>
+    <script>
+        var coraleatoria = ["blue", "red", "black", "green", "blue", "red", "black", "green", "orange", "yellow"];
+        var tamanhoaleatorio = ["30px", "20px", "50px", "10px", "30px", "20px", "50px", "10px", "100px", "5px"];
+
+        // function sorteia(x, y) {
+        //     x = Math.floor(Math.random() * 10);
+        //     y = Math.floor(Math.random() * 10);
+        // }
+
+        function js_style() {
+            x = Math.floor(Math.random() * 10);
+            y = Math.floor(Math.random() * 10);
+            document.getElementById("text").style.color = coraleatoria[x];
+            document.getElementById("text").style.fontSize = tamanhoaleatorio[y];
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+    <p id='text'>JavaScript Exercises - w3resource</p>
+</body>
+
+</html>

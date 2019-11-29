@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function alertar() {
+            x = document.getElementById("nome").value;
+            y = document.getElementById("sobrenome").value;
+            alert(x + " " + y);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <p>First name: <input type="text" id="nome" placeholder="Digite aqui seu nome"></p>
+
+    <p>Last name: <input type="text" id="sobrenome" placeholder="Digite aqui seu sobrenome"></p> -->
+
+    <p>First name: <input type="text" id="nome" value="Nome"></p>
+    <p>Last name: <input type="text" id="sobrenome" value="Sobrenome"></p>
+
+    <button id="botao" onclick="alertar()">Botão</button>
+</body>
+
+</html>
