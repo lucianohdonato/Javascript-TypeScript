@@ -7,7 +7,7 @@ function validateForm() {
     } else if (senha.value == "") {
         alert("Informar senha")
     } else if (senha.value == "senha") {
-        window.location.replace("https://g1.globo.com/");
+        window.location.href = "https://g1.globo.com/";
     } else {
         alert("Senha inválida");
         senha.value = null;
