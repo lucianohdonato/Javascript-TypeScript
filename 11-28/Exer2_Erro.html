@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var verificacao = 2;
+        var nome;
+
+        while (verificacao != 1) {
+            nome = prompt("Digite seu nome: ")
+            if (isNaN(nome) == true) 
+                verificacao = 1;
+        }
+            
+        var altura;
+        while (verificacao == 1) {
+            altura = prompt("Digite sua altura em cm: ");
+            if (isNaN(altura) == false) {
+                verificacao = 2;
+            }
+        }
+
+        var peso;
+        while (verificacao != 1) {
+            peso = prompt("Digite seu peso: ");
+            if (isNaN(peso) == false) {
+                verificacao = 2;
+            }
+        }
+
+        var imc;
+        function calculoimc(altura, peso) {
+            altura = parseFloat(altura / 100);
+            peso = parseFloat(peso);
+            imc = peso / (altura ** 2);
+            if (isNaN(imc) = true) {
+                alert("Erro no calculo, entrada de altura ou peso vazio");
+            }
+            else {
+                return imc;
+            }
+        }
+
+        function classificaIMC(imc) {
+            if (imc < 16) {
+                return "Baixo peso muito grave";
+            } else if (imc <= 16.99) {
+                return "Baixo peso grave";
+            } else if (imc <= 18.49) {
+                return "Baixo peso";
+            } else if (imc <= 24.99) {
+                return "Peso normal";
+            } else if (imc <= 29.99) {
+                return "Sobrepeso";
+            } else if (imc <= 34.99) {
+                return "Obesidade grau i";
+            } else if (imc <= 39.99) {
+                return "Obesidade grau ii";
+            } else {
+                return "Obesidade grau iii";
+            }
+        }
+
+        document.write(nome + " possui índice de massa corporal igual a " + calculoIMC(altura, peso).toFix(2) + ", sendo classificado como: " + classificaIMC(imc));
+
+    </script>
+
+</body>
+
+</html>

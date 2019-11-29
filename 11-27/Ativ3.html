@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function concatenar(string1, string2, string3) {
+            if (isNaN(string1) == false) {
+                string1.toString();
+            }
+            if (isNaN(string2) == false) {
+                string2.toString();
+            }
+            if (isNaN(string3) == false) {
+                string3.toString();
+            }
+            return string1.concat(string2, string3);
+        }
+        
+        //debugger;
+        var frase = concatenar("Pão ", 2, " Bacon ");
+        console.log(frase);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

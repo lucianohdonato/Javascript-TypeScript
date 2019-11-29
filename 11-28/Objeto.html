@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="jsExterno.js"></script>
+    </head>
+    <body>
+        <script>
+            var amigo = {
+                nome: "Luciano",
+                sobrenome: "Vinicius Cristiano",
+                idade: "Todos",
+                altura: 1.86,
+                nascimento: 1995,
+                oculos: true,
+
+                jogar: function() {
+                    console.log("Feedar e morrer direto");
+                    // console.log(this.sobrenome)
+                },
+                estudar: function () {
+                    console.log("Estudar programação");
+                }
+            }
+ 
+            for (const caracteristica in amigo) {
+                // if (amigo.hasOwnProperty(caracteristica)) {
+                // console.log(amigo[caracteristica]);
+                //}
+                if(typeof amigo[caracteristica] === "boolean" && amigo[caracteristica]){
+                    amigo[caracteristica] = "verdadeiro";
+                }
+                if(amigo[caracteristica] == false){
+                    amigo[caracteristica] = "falso";
+                }
+ 
+                if (typeof amigo[caracteristica] !== 'function'){
+                    console.log(caracteristica + " de amigo = " + amigo[caracteristica]);
+                } else{
+                    amigo[caracteristica]();
+                }
+            }
+
+        </script>
+    </body>
+</html>
