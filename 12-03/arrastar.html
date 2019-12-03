@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .div1 {
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+    <script>
+        //Evento permite que voce solte o elemento Html
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        //Evento disparado ao arrastar o Elemento Html
+        function drag(ev) {
+            ev
+                .dataTransfer
+                .setData("text", ev.target.id);
+
+            ev
+                .currentTarget
+                .style
+                .backgroundColor = 'yellow';
+        }
+
+        //Evento Responsavel por recepcionar o Elemento Html
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+
+        }
+    </script>
+</head>
+<body ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h1>Monte sua lista de atividade!</h1>
+    <h2>Lazer</h2>
+    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <h2>Dever</h2>
+    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <ul>
+        <li id="lista1" draggable="true" ondragstart="drag(event)">Jogar</li>
+        <li id="lista2" draggable="true" ondragstart="drag(event)">Arrumar casa</li>
+        <li id="lista3" draggable="true" ondragstart="drag(event)">Comer</li>
+        <li id="lista4" draggable="true" ondragstart="drag(event)">Trabalho</li>
+        <li id="lista5" draggable="true" ondragstart="drag(event)">Ver série</li>
+        <li id="lista6" draggable="true" ondragstart="drag(event)">Comer Hamburguer ou Pizza</li>
+        <li id="lista7" draggable="true" ondragstart="drag(event)">Dever a escolha</li>
+        <li id="lista8" draggable="true" ondragstart="drag(event)">Lazer a escolha</li>
+    </ul>
+</body>
+</html>
