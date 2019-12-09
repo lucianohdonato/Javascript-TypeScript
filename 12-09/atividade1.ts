@@ -12,7 +12,7 @@
  */
 
 function calcularValorDesconto(valor:number, taxa:number = 0.50): string {
-    return `O valor de Desconto da taxa aplicada é .....: ${valor * taxa}`;
+    return `O valor de Desconto da taxa aplicada é .....: R$${valor * taxa}`;
 }
 
 
