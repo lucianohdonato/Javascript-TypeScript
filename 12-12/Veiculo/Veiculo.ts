@@ -50,6 +50,11 @@ export class Veiculo{
         this._aceleracao = value;
     }
 
+    constructor(nome : string, cor : string){
+        this._nome = nome;
+        this._cor = cor;
+    }
+
     ligar(){
         console.log("Ligando...");
     }

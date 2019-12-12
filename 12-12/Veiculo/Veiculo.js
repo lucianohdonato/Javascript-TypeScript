@@ -1,7 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var Veiculo = /** @class */ (function () {
-    function Veiculo() {
+    function Veiculo(nome, cor) {
+        this._nome = nome;
+        this._cor = cor;
     }
     Veiculo.prototype.getnome = function () {
         return this._nome;

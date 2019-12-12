@@ -1,11 +1,9 @@
 import { Carro } from './Carro';
 import { Moto } from './Moto';
 
-var carro = new Carro;
-var moto = new Moto;
+var carro = new Carro("Herbie","Branco" );
+var moto = new Moto("", "Vermelha");
 
-carro.setnome("Herbie");
-carro.setcor("Branco");
 carro.setplaca("OFP 857");
 carro.setmarca("Volkswagen");
 carro.setrodas(4);
@@ -22,8 +20,6 @@ carro.trocarMarcha();
 carro.frear();
 carro.desligar();
 
-moto.setnome("");
-moto.setcor("Vermelha");
 moto.setplaca("");
 moto.setmarca("");
 moto.setrodas(2);
