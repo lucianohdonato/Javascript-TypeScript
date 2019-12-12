@@ -1,4 +1,4 @@
-import { Cambio } from './iCambio';
+import { Cambio } from '../Interface/ICambio';
 import { Veiculo } from './Veiculo';
 
 export class Carro extends Veiculo implements Cambio{

@@ -1,5 +1,5 @@
-import { Carro } from './Carro';
-import { Moto } from './Moto';
+import { Carro } from './Model/Carro';
+import { Moto } from './Model/Moto';
 
 var carro = new Carro("Herbie","Branco" );
 var moto = new Moto("", "Vermelha");

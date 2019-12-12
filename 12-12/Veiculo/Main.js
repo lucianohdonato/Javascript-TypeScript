@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
-var Carro_1 = require("./Carro");
-var Moto_1 = require("./Moto");
+var Carro_1 = require("./Model/Carro");
+var Moto_1 = require("./Model/Moto");
 var carro = new Carro_1.Carro("Herbie", "Branco");
 var moto = new Moto_1.Moto("", "Vermelha");
 carro.setplaca("OFP 857");

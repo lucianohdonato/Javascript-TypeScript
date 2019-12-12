@@ -1,5 +1,5 @@
 import { Veiculo } from './Veiculo';
-import { Cambio } from './iCambio';
+import { Cambio } from '../Interface/ICambio';
 
 export class Moto extends Veiculo implements Cambio{
     private _antenaCortaLinha: boolean;
